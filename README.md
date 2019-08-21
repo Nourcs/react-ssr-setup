@@ -1,4 +1,4 @@
-# ⚛ React + Express – SSR Setup with TypeScript
+# ⚛ React + Express – SSR Setup with Plain JavaScript
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/085d871cd62fe4435865/maintainability)](https://codeclimate.com/github/manuelbieh/react-ssr-setup/maintainability)
 [![dependencies Status](https://david-dm.org/manuelbieh/react-ssr-setup/status.svg)](https://david-dm.org/manuelbieh/react-ssr-setup)
