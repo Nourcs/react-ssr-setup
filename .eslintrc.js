@@ -1,7 +1,7 @@
 const paths = require('./config/paths');
 
 module.exports = {
-    extends: ['wiremore', 'wiremore/react', 'wiremore/typescript'],
+    extends: ['wiremore', 'wiremore/react'],
     globals: {
         __BROWSER__: true,
         __SERVER__: true,

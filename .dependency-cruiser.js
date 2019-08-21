@@ -79,14 +79,11 @@ module.exports = {
         },
     ],
     options: {
-        tsConfig: {
-            fileName: 'tsconfig.json',
-        },
         /* conditions specifying which files not to follow further when encountered:
-           - path: a regular expression to match
-           - dependencyTypes: see https://github.com/sverweij/dependency-cruiser/blob/develop/doc/rules-reference.md#dependencytypes
-             for a complete list
-        */
+    - path: a regular expression to match
+    - dependencyTypes: see https://github.com/sverweij/dependency-cruiser/blob/develop/doc/rules-reference.md#dependencytypes
+      for a complete list
+ */
         doNotFollow: {
             // path: 'node_modules',
             dependencyTypes: [

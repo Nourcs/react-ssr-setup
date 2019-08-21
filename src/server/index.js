@@ -25,17 +25,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const addStore = (
-    _req: express.Request,
-    res: express.Response,
-    next: express.NextFunction | undefined
-): void => {
+const addStore = (_req, res, next) => {
     res.locals.store = configureStore({});
     if (typeof next !== 'function') {
         throw new Error('Next handler is missing');
     }
     next();
 };
+
 
 app.use(addStore);
 

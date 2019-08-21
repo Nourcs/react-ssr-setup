@@ -10,8 +10,7 @@ module.exports = {
                 },
             },
         ],
-        '@babel/react',
-        '@babel/typescript',
+        '@babel/react'
     ],
     plugins: [
         '@babel/proposal-object-rest-spread',

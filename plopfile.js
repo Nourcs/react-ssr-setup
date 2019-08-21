@@ -24,13 +24,13 @@ module.exports = (plop) => {
                 {
                     type: 'pretty-add',
                     path:
-                        './src/shared/components/{{properCase componentName}}/{{properCase componentName}}.tsx',
+                        './src/shared/components/{{properCase componentName}}/{{properCase componentName}}.js',
                     templateFile: './config/plop/component/component.js.plop',
                 },
                 {
                     type: 'pretty-add',
                     path:
-                        './src/shared/components/{{properCase componentName}}/{{properCase componentName}}.test.tsx',
+                        './src/shared/components/{{properCase componentName}}/{{properCase componentName}}.test.js',
                     templateFile: './config/plop/component/component.test.js.plop',
                 },
             ];
@@ -38,13 +38,13 @@ module.exports = (plop) => {
             if (answers.connectToRedux) {
                 actions.push({
                     type: 'pretty-add',
-                    path: './src/shared/components/{{properCase componentName}}/index.ts',
+                    path: './src/shared/components/{{properCase componentName}}/index.js',
                     templateFile: './config/plop/component/index.connected.js.plop',
                 });
             } else {
                 actions.push({
                     type: 'pretty-add',
-                    path: './src/shared/components/{{properCase componentName}}/index.ts',
+                    path: './src/shared/components/{{properCase componentName}}/index.js',
                     templateFile: './config/plop/component/index.unconnected.js.plop',
                 });
             }
@@ -66,37 +66,37 @@ module.exports = (plop) => {
             const actions = [
                 {
                     type: 'pretty-add',
-                    path: './src/shared/store/{{camelCase reducerName}}/actions.ts',
+                    path: './src/shared/store/{{camelCase reducerName}}/actions.js',
                     templateFile: './config/plop/reducer/actions.js.plop',
                 },
                 {
                     type: 'pretty-add',
-                    path: './src/shared/store/{{camelCase reducerName}}/actions.test.ts',
+                    path: './src/shared/store/{{camelCase reducerName}}/actions.test.js',
                     templateFile: './config/plop/reducer/actions.test.js.plop',
                 },
                 {
                     type: 'pretty-add',
-                    path: './src/shared/store/{{camelCase reducerName}}/reducer.ts',
+                    path: './src/shared/store/{{camelCase reducerName}}/reducer.js',
                     templateFile: './config/plop/reducer/reducer.js.plop',
                 },
                 {
                     type: 'pretty-add',
-                    path: './src/shared/store/{{camelCase reducerName}}/reducer.test.ts',
+                    path: './src/shared/store/{{camelCase reducerName}}/reducer.test.js',
                     templateFile: './config/plop/reducer/reducer.test.js.plop',
                 },
                 {
                     type: 'pretty-add',
-                    path: './src/shared/store/{{camelCase reducerName}}/selectors.ts',
+                    path: './src/shared/store/{{camelCase reducerName}}/selectors.js',
                     templateFile: './config/plop/reducer/selectors.js.plop',
                 },
                 {
                     type: 'pretty-add',
-                    path: './src/shared/store/{{camelCase reducerName}}/selectors.test.ts',
+                    path: './src/shared/store/{{camelCase reducerName}}/selectors.test.js',
                     templateFile: './config/plop/reducer/selectors.test.js.plop',
                 },
                 {
                     type: 'pretty-add',
-                    path: './src/shared/store/{{camelCase reducerName}}/types.ts',
+                    path: './src/shared/store/{{camelCase reducerName}}/types.js',
                     templateFile: './config/plop/reducer/types.js.plop',
                 },
             ];

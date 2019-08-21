@@ -25,28 +25,15 @@ i18next.init({
 
 i18next.languages = ['de_DE', 'en_US'];
 
-type Props = {
-    children: React.ReactNode;
-    locale: 'en_US' | 'de_DE';
-};
-
-const I18N = ({ children, locale }: Props) => {
+const I18N = ({ children, locale }) => {
     useEffect(() => {
         i18next.changeLanguage(locale);
     }, [locale]);
-
     return <I18nextProvider i18n={i18next}>{children}</I18nextProvider>;
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state) => ({
     locale: getLocale(state),
 });
 
-export default withRouter<any, any>(
-    connect(
-        mapStateToProps,
-        null,
-        null,
-        { pure: false }
-    )(React.memo(I18N))
-);
+export default withRouter(connect(mapStateToProps, null, null, { pure: false })(React.memo(I18N)));
