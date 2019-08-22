@@ -1,4 +1,4 @@
-# ⚛ React + Express – SSR Setup with TypeScript
+# ⚛ React + Express – SSR Setup with Plain JavaScript
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/085d871cd62fe4435865/maintainability)](https://codeclimate.com/github/manuelbieh/react-ssr-setup/maintainability)
 [![dependencies Status](https://david-dm.org/manuelbieh/react-ssr-setup/status.svg)](https://david-dm.org/manuelbieh/react-ssr-setup)
@@ -27,7 +27,6 @@
     -   [Avoid source map generation for faster builds](#avoid-source-map-generation-for-faster-builds)
     -   [Change the port of the dev environment](#change-the-port-of-the-dev-environment)
     -   [Import SVGs as ReactComponent](#import-svgs-as-reactcomponent)
-    -   [Use plain JavaScript instead of TypeScript](#use-plain-javascript-instead-of-typescript)
 -   [Caveats](#caveats)
 -   [Todo](#todo)
 -   [Changelog](#changelog)
@@ -109,7 +108,7 @@ Update all Jest snapshots (if there are any)
 
 #### `yarn lint:js`
 
-Run ESLint for all JavaScript and TypeScript files
+Run ESLint for all JavaScript files
 
 #### `yarn lint:css`
 
@@ -192,18 +191,6 @@ import { ReactComponent as Logo } from './Logo.svg';
 Then you can use it in JSX like `<div><Logo /></div>`.
 
 [Here is a video](https://egghead.io/lessons/react-add-svgs-as-react-components-with-create-react-app-2-0) that explains that a bit more.
-
-### Use plain JavaScript instead of TypeScript
-
-You can just do it‬™. Really. Name your files `.js` instead of `.ts`/`.tsx` and you should not be bothered by TypeScript anymore. If you want to _fully_ remove TypeScript:
-
--   remove the `@babel/typescript` preset from `babel.config.js`
--   uninstall TypeScript: `yarn remove typescript @babel/preset-typescript`
--   uninstall all dependencies beginning with `@types/`
--   delete `tsconfig.json` and `src/global.d.ts`
--   remove `wiremore/typescript` from the `extends` section in `.eslintrc.js`
--   remove all types from all files if there still are any
--   remove `tsConfig` option from `.dependency-cruiser.js`
 
 ## Caveats
 
