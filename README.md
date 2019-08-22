@@ -73,7 +73,7 @@ This project has out-of-the-box support for the following things:
     -   ✅ Immer
     -   ✅ Reselect
     -   ✅ React Router 5
-    -   ✅ React i18next for multi language support
+    -   ✅ Tailwindcss
     -   ✅ React Helmet
 
 Since it's only using standard APIs so far it is ready to be used with the new React Suspense feature coming in React 17!
