@@ -1,19 +1,14 @@
 import * as React from 'react';
-import * as express from 'express';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
-import { Store } from 'redux';
 import { Provider } from 'react-redux';
-import IntlProvider from '../../shared/i18n/IntlProvider';
 import App from '../../shared/App';
 import Html from '../components/HTML';
 
 const serverRenderer = () => (req, res) => {
     const content = renderToString(<Provider store={res.locals.store}>
         <Router location={req.url} context={{}}>
-            <IntlProvider>
-                <App />
-            </IntlProvider>
+            <App />
         </Router>
     </Provider>);
     const state = JSON.stringify(res.locals.store.getState());

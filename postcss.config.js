@@ -7,6 +7,7 @@ module.exports = {
         }),
         require('postcss-nested')(),
         require('postcss-flexbugs-fixes')(),
+        require('tailwindcss')(),
         require('autoprefixer')(),
         require('postcss-custom-properties')(),
         require('postcss-assets')({
